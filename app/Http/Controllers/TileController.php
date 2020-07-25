@@ -48,7 +48,8 @@ class TileController extends Controller
     {
         $tile = Tile::findOrFail($tile_id);
         // return $tile->posts;
-        return response([ 'posts' => $tile->posts, 'message' => 'Retrieved successfully'], 200);
+        return response(['success' => true, 'message' => 'Retrieved successfully', 
+            'data' => $tile->posts], 200);
     }
 
     // /**

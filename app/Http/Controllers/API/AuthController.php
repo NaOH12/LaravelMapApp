@@ -25,7 +25,9 @@ class AuthController extends Controller
         ]);
         
         if ($validator->fails()) {
-            return response([ 'reponse' => $validator->errors()]);
+            return response(['success' => false, 
+                'message' => 'Validation failed',
+                'reponse' => $validator->errors()]);
         }
 
         $validatedData = $request->only(['name', 'email', 'date_of_birth', 'password']);
@@ -36,7 +38,7 @@ class AuthController extends Controller
 
         $accessToken = $user->createToken('authToken')->accessToken;
 
-        return response([ 'user' => $user, 'access_token' => $accessToken]);
+        return response(['success' => true, 'access_token' => $accessToken]);
     }
 
     public function login(Request $request)
@@ -48,16 +50,18 @@ class AuthController extends Controller
         ]);
         
         if ($validator->fails()) {
-            return response([ 'reponse' => $validator->errors()]);
+            return response(['success' => false, 'message' => 'Validation failed',
+                'reponse' => $validator->errors()]);
         }
 
         if (!auth()->attempt($request->only(['email', 'password']))) {
-            return response(['message' => 'Invalid Credentials']);
+            return response(['success' => false, 'message' => 'Invalid Credentials']);
         }
 
         $accessToken = auth()->user()->createToken('authToken')->accessToken;
 
-        return response(['user' => auth()->user(), 'access_token' => $accessToken]);
+        return response(['success' => true, 'message' => 'Success', 
+            'access_token' => $accessToken]);
 
     }
 }
