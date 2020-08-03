@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreateArtPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-
+        Schema::create('art_posts', function (Blueprint $table) {
             $table->id();
-            $table->string('post_content');
             $table->double('longitude');
             $table->double('latitude');
+            $table->double('rotation');
+            $table->bigInteger('postable_id')->unsigned();
+            $table->string('postable_type');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('tile_id')->unsigned();
             $table->timestamps();
@@ -28,7 +29,7 @@ class CreatePostsTable extends Migration
                 onUpdate('cascade');
 
             $table->foreign('tile_id')->references('id')->
-                on('tiles');
+                on('art_tiles');
         });
     }
 
@@ -39,7 +40,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('art_posts');
     }
-
 }

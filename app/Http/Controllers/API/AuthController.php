@@ -20,7 +20,7 @@ class AuthController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:55',
             'email' => 'email|required|unique:users',
-            'date_of_birth' => ['before:13 years ago'],
+            'date_of_birth' => 'required|before:13 years ago',
             'password' => 'required|confirmed',
         ]);
         

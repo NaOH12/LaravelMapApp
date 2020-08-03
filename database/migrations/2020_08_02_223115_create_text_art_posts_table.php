@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTilesTable extends Migration
+class CreateTextArtPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateTilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tiles', function (Blueprint $table) {
+        Schema::create('text_art_posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('x');
-            $table->integer('y');
+            $table->string('text_content');
+            $table->string('colour');
+            $table->string('font');
+            $table->double('size');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +30,6 @@ class CreateTilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tiles');
+        Schema::dropIfExists('text_art_posts');
     }
 }

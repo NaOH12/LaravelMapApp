@@ -12,7 +12,6 @@ $factory->define(Post::class, function (Faker $faker) {
         // 'latitude' => $faker->randomFloat($nbMaxDecimals = 3, $min = 51.766, $max = 51.966),
         'longitude' => 0,
         'latitude' => 0,
-        'likes' => $faker->numberBetween(0, 50),
         'user_id' => App\User::inRandomOrder()->first()->id,
         'tile_id' => App\Tile::inRandomOrder()->first()->id,
         // 'tile_id' => 0,
