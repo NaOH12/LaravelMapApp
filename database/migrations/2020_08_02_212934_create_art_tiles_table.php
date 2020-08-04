@@ -17,9 +17,9 @@ class CreateArtTilesTable extends Migration
             $table->id();
             $table->integer('x');
             $table->integer('y');
-            $table->bigInteger('parent_tile_id')->unsigned();
+            $table->bigInteger('tile_id')->unsigned();
 
-            $table->foreign('parent_tile_id')->references('id')->
+            $table->foreign('tile_id')->references('id')->
             on('tiles');
         });
     }

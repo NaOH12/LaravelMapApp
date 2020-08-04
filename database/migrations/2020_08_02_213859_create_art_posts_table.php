@@ -21,14 +21,14 @@ class CreateArtPostsTable extends Migration
             $table->bigInteger('postable_id')->unsigned();
             $table->string('postable_type');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('tile_id')->unsigned();
+            $table->bigInteger('art_tile_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->
                 on('users')->onDelete('cascade')->
                 onUpdate('cascade');
 
-            $table->foreign('tile_id')->references('id')->
+            $table->foreign('art_tile_id')->references('id')->
                 on('art_tiles');
         });
     }

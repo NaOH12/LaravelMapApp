@@ -15,15 +15,19 @@ class ArtTile extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'x', 'y', 'parent_tile_id',
+        'id', 'x', 'y', 'tile_id',
     ];
 
     // public function posts() {
     //     return $this->hasMany('App\Post');
     // }
 
-    public function parentTile() {
-        return $this->hasOne('App\Tile');
+    public function tile() {
+        return $this->belongsTo('App\Tile');
+    }
+
+    public function artPosts() {
+        return $this->hasMany('App\ArtPost');
     }
 
 }

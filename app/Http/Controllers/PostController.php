@@ -58,7 +58,6 @@ class PostController extends Controller
             'id' => $tile_id,
             'x' => $tile_x,
             'y' => $tile_y,
-            'z' => $zoom_level
         ]);
 
         $post = new Post;

@@ -30,8 +30,8 @@ class ArtPostTableSeeder extends Seeder
             // Make child text art post
             $text_post = new App\TextArtPost;
             $text_post->text_content = $faker->sentence($nbWords = 20, $variableNbWords = true);//$faker->realText(200, 1);
-            $text_post->colour = "000000FF";
-            $text_post->font = "Comic Sans";
+            $text_post->colour = 16777215;
+            $text_post->font = 0;
             $text_post->size = 12.0;
             $text_post->save();
 
@@ -41,7 +41,7 @@ class ArtPostTableSeeder extends Seeder
             // Create parent post
             $post = new App\ArtPost;
             
-            $post->tile_id = $tile->id;
+            $post->art_tile_id = $tile->id;
             $x = $tile->x;
             $y = $tile->y;
             $n = pow(2, $zoom_level);

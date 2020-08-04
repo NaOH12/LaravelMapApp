@@ -16,10 +16,9 @@ class CreateTextArtPostsTable extends Migration
         Schema::create('text_art_posts', function (Blueprint $table) {
             $table->id();
             $table->string('text_content');
-            $table->string('colour');
-            $table->string('font');
+            $table->integer('colour')->unsigned();
+            $table->integer('font')->unsigned();
             $table->double('size');
-            $table->timestamps();
         });
     }
 

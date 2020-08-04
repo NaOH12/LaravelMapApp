@@ -22,7 +22,7 @@ class Tile extends Model
         return $this->hasMany('App\Post');
     }
     
-    public function childTiles() {
+    public function artTiles() {
         return $this->hasMany('App\ArtTile');
     }
 

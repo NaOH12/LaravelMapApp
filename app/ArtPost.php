@@ -15,4 +15,8 @@ class ArtPost extends Model
         return $this->morphTo();
     }
 
+    public function artTile() {
+        return $this->belongsTo('App\ArtTile');
+    }
+
 }

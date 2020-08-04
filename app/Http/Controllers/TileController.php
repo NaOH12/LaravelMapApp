@@ -47,9 +47,8 @@ class TileController extends Controller
     public function show($tile_id)
     {
         $tile = Tile::findOrFail($tile_id);
-        // return $tile->posts;
         return response(['success' => true, 'message' => 'Retrieved successfully', 
-            'data' => $tile->posts], 200);
+            'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
     }
 
     // /**

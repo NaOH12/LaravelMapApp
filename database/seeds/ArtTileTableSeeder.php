@@ -38,7 +38,7 @@ class ArtTileTableSeeder extends Seeder
             $art_tile->id = (pow(2, $zoom_level) * $y) + $x + 1;
             $art_tile->x = $x;
             $art_tile->y = $y;
-            $art_tile->parent_tile_id = $parent_tile->id;
+            $art_tile->tile_id = $parent_tile->id;
             $art_tile->save();
             
         }
