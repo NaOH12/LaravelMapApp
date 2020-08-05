@@ -12,6 +12,7 @@
 
 /*----------CLASS----------*/
 
+
 body {
 	text-align:center;	
 	/*background: url(images/space.jpg);*/
@@ -146,9 +147,53 @@ video {
 	height: auto   !important;
 }
 
+#colourVideoContainer {
+	background: rgb(0,0,0);background: radial-gradient(circle, rgba(0,0,0,0.9668242296918768) 0%, rgba(0,0,0,0.7483368347338936) 58%, rgba(0,0,0,0.5130427170868348) 100%);
+}
+
+#colourVideo video {
+	padding-top:2%;
+	padding-bottom:2%;
+	padding-left:15%;
+	padding-right:15%;
+	/* object-fit: fill; */
+	width: 100%    !important;
+	object-fit: fill;
+	height: 50vh   !important;
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+#disBgImage {
+	background-image: url('DisImages/cover.png');
+	/* background-size: 100%; */
+	/* background-position: stretch; */
+	/* background-repeat: no-repeat; */
+	/* background-size:cover; */
+	margin-top: 4%;
+	margin-bottom: 4%;
+	background-size: 35% 35%;
+    /* width: auto; */
+    /* padding-top: 54.166666666667%; */
+	height: 50vh;
+
+	/* object-fit: cover;
+	object-position: top; */
+	/* background-size: cover; */
+	background-position: contain;
+	background-repeat: no-repeat;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .side_info {
 	text-align:left;
 	padding:19%;
+}
+
+.side_info_pad-small {
+	text-align:left;
+	padding-left:19%;
+	padding-right:10%;
+	padding-top: 10%;
 }
 
 .endGameBase {
