@@ -1,0 +1,528 @@
+.greybackground {
+	background-color:F8F8F8;
+}
+
+/*---------CSS_STUFF-----------*/
+
+									/*FONTS*/
+@font-face {
+    font-family: DancingScript;
+    src: url(DancingScript.ttf);
+}
+
+@font-face {
+    font-family: LifeSavers;
+    src:url(LifeSavers-Regular.ttf);
+}
+
+@font-face {
+	font-family:Ombra;
+	src:url(Semplicita%20Ombra.otf);
+}
+
+@font-face {
+	font-family:OmbraRegular;
+	src:url(Semplicita%20Medium.otf);
+}
+
+.whitetext {
+	color:#FFFFFF;	
+}
+
+.logoimage {
+	padding-top:200px;/*padding-top:200px;*/        /****************/
+	text-align:center;
+	
+}
+
+.logoimage img {
+	max-width:100%;
+
+}
+
+.title-text {
+	padding-top:10px;
+	font-size:16px;
+	color:#FFFFFF;
+	font-family:DancingScript;
+	max-width:100%;
+}
+
+
+#vidcontainer {
+  height: 100vh;/*height: 670px;*/     /***********************/
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  overflow: hidden;
+  max-width:100%;
+  
+}
+
+@media screen and (max-width: 440px) {
+	#vidcontainer {
+		height:600px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	#vidcontainer {
+		height:570px;
+	}
+}
+
+#video-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;/*z-index: 0;/*         /*********************/
+  overflow: hidden;
+}
+
+.mobileVid {
+	background-image:url(images/roses.png);
+	background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.video {	
+  display: block;
+  vertical-align: baseline;
+}
+
+.title-head {
+	position:relative;
+	z-index: 1000;
+	height: 100vh;/*del*/               /**********************/
+	padding-top:41px;
+	padding-bottom:240px;
+}
+
+
+
+
+
+
+
+							/*NEIGHBORHOOD GUIDES*/
+					
+.subtitle {
+	text-align:center;
+	padding-bottom:35px;
+}
+
+.subtitle h2 {
+	color:rgb(255,60,102);
+	font-size: 40px;
+	font-family:DancingScript;
+}
+
+.neighborhood-guides {
+	padding-top: 28px;
+    background-color: rgb(248,248,248);
+    border-bottom: 1px solid #dbdbdb;
+	padding-bottom: 10px;
+}
+
+.neighborhood-guides .row h3 {
+    color: #EF5A84;
+    font-size: 24px;
+	font-family:DancingScript;
+}
+
+#subtitleh3 {
+	font-size:15px;
+}
+
+.neighborhood-guides p {
+    font-size: 15px;
+    margin-bottom: 13px;
+	color: #393c3d;
+}
+
+.neighborhood-guides .thumbnail {
+	height:300px;
+}				   
+							/*ABOUT-US*/
+.jumbo1and2 .jumbotron {
+	background-image:url('images/hands.jpg');
+ 	height: auto;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+	padding-bottom:80px;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.jumbotitle h2 {
+	color:rgb(300,60,102);
+    font-size: 40px;
+	
+}
+
+.jumbotitle h3 {
+	color: #EF5A84;
+}
+
+.jumbotitle {
+	text-align:center;
+	padding-bottom:20px;
+	font-family:DancingScript;
+}
+
+.jumbo1and2 .container {
+	border-radius: 5px;
+	text-align:center;
+	height: auto;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.container-controller {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#aboutus1 {
+	padding-top:30px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:16px;
+	color:#2E2E2E;
+	text-align:center;
+	line-height: 1.42857;
+	box-sizing: border-box;
+	padding-bottom:25px
+}
+
+.aboutustextbox {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.aboutustextbox2 {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+iframe {
+	max-width:100%;
+	padding-bottom:50px;
+}
+
+#About-sub1 {
+	font-size:15px;
+	text-transform: uppercase;
+	font-family:OmbraRegular;
+}
+
+#About-sub2 {
+	font-size:30px;
+	text-transform: uppercase;
+	font-family:Ombra;
+}
+
+#About-sub3 {
+	font-size:20px;
+	text-transform: uppercase;
+	font-family:OmbraRegular;
+	padding-bottom:10px;
+}
+
+.Aboutus-row-control {
+	padding-bottom:20px;
+}
+
+							/*PERSONAL CARE*/
+
+.Personal-care {
+	background-color: #F8F8F8;
+	padding-top:50px;
+	padding-bottom:30px;
+}
+							
+#Personal-care-TITLE {
+	text-align:center;
+	padding-bottom:25px;
+}
+
+#Personal-care-TITLE h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.Personal-care h3 {
+	font-size:26px;
+	font-family:DancingScript;
+}
+
+#capital {
+	font-family:DancingScript;
+	font-size:20px;
+}
+
+.Personal-care p {
+	padding-bottom:10px;
+}
+
+							/*Content-Splitter*/
+
+/*.Content-Splitter {
+	text-align:center;
+	background-color:#F8F8F8;
+	padding-top: 50px;
+}*/
+
+.Content-Splitter {
+	background-color:#F8F8F8;
+	padding-top:40px;
+	padding-right:30px;
+	padding-left:30px;
+}
+
+hr {
+	display:block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    border-style:inset;
+    border-width: 1px;
+	width: 800px;
+	max-width:100%;
+}
+
+/*.Content-Splitter img {
+	max-width:100%;
+}*/
+
+							/*Disabilities*/
+
+.Disabilities {
+	padding-top:20px;
+	padding-bottom:40px;
+	background-color:#F8F8F8;
+}
+
+.Disabilities .container {
+	background-color:#F8F8F8;
+}
+
+#Disabilities-TITLE {
+	text-align:center;
+}
+
+#Disabilities-TITLE h2 {
+	background-color:#F8F8F8;
+	font-size:40px;
+	color:#000000;
+	font-family:DancingScript;
+}
+
+							/*FEES*/
+
+
+
+
+.Fees {
+	border:#F9F9F9;
+	border-style:solid;
+	border-width:1px;
+}
+
+.Fees .jumbotron {
+	background-image:url(elder%20care.jpg);
+ 	height: auto;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:80px;
+}
+
+.jumbotitle2 h2 {
+	color:rgb(300,60,102);
+    font-size: 40px;
+	
+}
+
+.jumbotitle2 h3 {
+	color: #EF5A84;
+}
+
+.jumbotitle2 {
+	text-align:center;
+	padding-bottom:20px;
+	font-family:DancingScript;
+}
+
+.Fees .container {
+	padding-top:50px;
+	border-radius: 5px;
+	text-align:center;
+	height: auto;
+	background-color: rgba(255,255,255,0.8);
+}
+
+#content2 {
+	padding-top:10px;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size:17px;
+	color:#393C3D;
+	text-align:center;
+	line-height: 1.42857;
+	box-sizing: border-box;
+	padding-bottom:50px
+}
+
+.contenttextbox {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.contenttextbox2 {
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#titletable {
+	padding-bottom:40px;
+}
+
+#contenttable {
+	padding-bottom:20px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+
+
+
+
+
+
+
+
+
+							/*FOOTER*/
+.footer {
+	background-color: #DFDFDF;
+	padding-top:9px;
+	padding-bottom:15px;
+}
+
+#CQC_LOGO img{
+	max-width:100%;
+	width:120px;
+}
+
+#CQC_LOGO {
+	padding-top:10px;
+	padding-bottom:5px;
+}
+
+#mid-foot {
+	font-size:10px;
+	padding-top:20px;
+}
+
+#right-foot {
+	padding-top:20px;
+}
+
+							/*INDIVIDUAL IDS*/
+#tinytext {
+	font-size:10px;
+}
+
+#normal {
+	text-align:center;
+}
+
+#last-words {
+	text-align:center;
+	font-family: 'Shift', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#last-words a {
+	color: #00b0ff;
+}
+
+#subs {
+	font-size:23px;
+	font-family:DancingScript;
+	padding-bottom:5px;
+}
+
+#centered {
+	text-align:center;
+}
+
+#black {
+	color:#000000;
+}
+
+.linked a{
+	text-decoration: none;
+}
+
+.greybackground {
+	background-color: #F8F8F8;
+}
+
+#left {
+	text-align:left;
+}
+
+#fadeIn1 {
+	-webkit-animation-duration: 2s;
+	-webkit-animation-delay:0s;
+	-o-animation-duration: 2s;
+	-o-animation-delay: 0s;
+	-moz-animation-duration: 2s;
+	-moz-animation-delay: 0s;
+	animation-duration: 2s;
+	animation-delay: 0s;	
+}
+
+#fadeIn2 {
+	-webkit-animation-duration: 1s;
+	-webkit-animation-delay:0.5s;
+	-o-animation-duration: 1s;
+	-o-animation-delay: 0.5s;
+	-moz-animation-duration: 1s;
+	-moz-animation-delay: 0.5s;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+}
+
+#bold {
+	font-weight:bold;
+}
+
+#overall-hidden {
+	position:relative;
+	overflow:hidden;	
+}
+
+/*---------------@MEDIA----------------*/
+
+
+@media screen and (max-width: 420px) {
+	#content2 {
+		font-size:13px;
+	}
+}
+@media screen and (max-width: 380px) {
+	#content2 {
+		font-size:10px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	#verticalline1 {
+		border-left: 0px;
+	}
+}

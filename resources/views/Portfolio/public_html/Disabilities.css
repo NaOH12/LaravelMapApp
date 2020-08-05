@@ -1,0 +1,29 @@
+.control {
+	padding-top:50px;
+}
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+
+#Disabilities-TITLE {
+	padding-top:16px;
+	padding-bottom:15px;
+}

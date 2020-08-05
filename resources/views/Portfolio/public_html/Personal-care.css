@@ -1,0 +1,31 @@
+.control {
+	padding-top:50px;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+
+#linkpage {
+	padding-top:0px;
+	text-align:center;
+	font-family:DancingScript;
+}
+
+#linkpage a{
+	font-size:25px;
+	color:#6GC5C9;
+}

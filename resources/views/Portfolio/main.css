@@ -1,0 +1,460 @@
+/*----------FONTS----------*/
+
+@font-face {
+		font-family: HEADING;
+		src:url(Ailerons-Typeface.otf);
+}
+
+@font-face {
+		font-family: TEXT_FONT;
+		src:url(Semplicita-Medium.otf);
+}
+
+/*----------CLASS----------*/
+
+body {
+	text-align:center;	
+	/*background: url(images/space.jpg);*/
+	background: url(images/mountains.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+.shadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.section {
+	text-align:center;
+	max-width:100%;
+	opacity:1;
+}
+
+.section_heading {
+	opacity:0.7;
+}
+
+.endGameSection_heading {
+	background: url(images/mountainsBlurWhite.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+	opacity: 1;
+}
+
+.heading {
+	font-family: HEADING;
+	font-size:100px;
+	color: black;
+	padding-top:25vh;
+	padding-bottom:5vh;
+	opacity:0.8;
+}
+
+.sub_heading {
+	font-family: HEADING;
+	font-size:40px;
+	color: black;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.endGameSub_heading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: black;
+	padding-top:1%;
+	padding-bottom:1%;
+	opacity:0.7;
+}
+
+.sub_heading_white {
+	font-family: TEXT_FONT;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.sub_heading_black {
+	font-family: TEXT_FONT;
+	color: black;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.sub_heading_white h1 {
+	font-size:30px;
+}
+
+.sub_heading_white h2 {
+	font-size:20px;
+}
+
+.sub_heading_white h3 {
+	font-size:8px;
+}
+
+.sub_heading_black h1 {
+	font-size:30px;
+}
+
+.sub_heading_black h2 {
+	font-size:20px;
+}
+
+.sub_heading_black h3 {
+	font-size:8px;
+}
+
+#grey {
+	color:grey;
+}
+
+#portfolioHeading {
+	font-family: HEADING;
+	font-size:40px;
+	color: black;
+	padding-bottom:1%;
+}
+
+#portfolioHeadingContainer {
+	background: url(images/mountainsBlur.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+	opacity: 1;
+}
+
+.text {
+	font-family: TEXT_FONT;
+	font-size:19px;
+}
+
+.endGameContainer {
+	background-color:  #293a75;
+}
+
+.endGameAIContainer {
+	background-color:  #013545;
+}
+
+video {
+	padding-top:10%;
+	padding-bottom:10%;
+	width: 100%    !important;
+	height: auto   !important;
+}
+
+.side_info {
+	text-align:left;
+	padding:19%;
+}
+
+.endGameBase {
+	background: url(EndGameImages/Final/Base.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.endGameClouds {
+	background: url(EndGameImages/Final/Clouds.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.aboutMeContainer {
+	padding-bottom:0%;
+	text-align:center;
+	background: url(images/mountainsBlur.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+	min-height: 100vh;
+	padding-bottom:20%;
+}
+
+.portfolioContainer {
+	padding-top:2%;
+	padding-bottom:2%;
+}
+
+.contactMeContainer {
+	padding-top:40vh;
+	padding-bottom:40vh;
+	min-height: 100vh;
+	text-align:center;
+	background: url(images/mountainsBlur.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+}
+
+.bHopContainer {
+	background-color:white;
+}
+
+.bHopBase {
+	background: url(BHopImages/Final/Base.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bHopSection {
+	text-align:center;
+	background-color:#fb717e;
+	max-width:100%;
+}
+
+.bHopSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.rayContainer {
+	background-color:#7dc4b8;
+}
+
+.raySection {
+	text-align:center;
+	background-color:#e27d5f;
+	max-width:100%;
+}
+
+.raySubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.RRContainer {
+	background-color:white;
+}
+
+.RRBase {
+	background: url(RRImages/Final/Base.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.RRRocket {
+	background: url(RRImages/Final/Rocket.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.RRSection {
+	text-align:center;
+	background-color:#336688;
+	max-width:100%;
+}
+
+.RRSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.CCContainer {
+	background-color:white;
+}
+
+.CCBase {
+	background: url(CCImages/Final/Base.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CCPlayer {
+	background: url(CCImages/Final/Player.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CCSection {
+	text-align:center;
+	background-color:#FF9900;
+	max-width:100%;
+}
+
+.LaSection {
+	text-align:center;
+	max-width:100%;
+	background: url(images/mountainsBlurWhite.jpg);
+    background-position:center;
+	background-size:cover;
+	background-attachment: fixed;
+	opacity: 1;
+}
+
+.LaSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: black;
+	padding-top:1%;
+	padding-bottom:1%;
+	opacity:0.7;
+}
+
+.CCSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.CwContainer {
+	background-color:white;
+}
+
+.CwSection {
+	text-align:center;
+	background-color:white;
+	max-width:100%;
+	opacity:0.9;
+}
+
+.CwSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: black;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.GravContainer {
+	background-color:white;
+}
+
+.GravBg {
+	background: url(GravitoImages/Images/Bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.GravPlayer {
+	background: url(GravitoImages/Images/Orbs.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.GravSection {
+	text-align:center;
+	background-color:#eff8ff;
+	max-width:100%;
+}
+
+.GravSubHeading {	
+	font-family: HEADING;
+	font-size:40px;
+	color: Black;
+	opacity: 0.7;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.CSGCWContainer {
+	background-color:white;
+}
+
+.CSGCWBg {
+	background-color: #eff8ff;
+}
+
+.CSGCWSubBg {
+	background: url(230Images/Images/Desktop.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CSGCWSubSubBg {
+	background: url(230Images/Images/Keyboard.png);
+	background-position: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.CSGCWSection {
+	text-align:center;
+	background-color:#00a3cc;
+	max-width:100%;
+}
+
+.CSGCWSubHeading {
+	font-family: HEADING;
+	font-size:40px;
+	color: white;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+
+.CSGCWText {
+	position: absolute;
+	font-family: TEXT_FONT;
+	color: black;
+	padding-top:20%;
+	padding-left:8%;
+	padding-bottom:1%;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#heading_split {
+	padding-top:2vh;
+	padding-left:10vw;
+	padding-right:10vw;
+}
+
+#promoImage {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+[data-aos="rotate-left"] {
+  transform: rotate(180deg);
+  transition-property: transform;
+}
+
+[data-aos="rotate-left"].aos-animate {
+  transform: rotate(0deg);
+}
+
+[data-aos="bHop"] {
+  transform: rotate(-150deg);
+  transition-property: transform;
+}
+
+[data-aos="bHop"].aos-animate {
+  transform: rotate(0deg);
+}

@@ -1,0 +1,93 @@
+.greybackground {
+	padding-top:38px;
+	background-image:url(images/elder%20care.jpg);
+}
+
+.control {
+	padding-top:50px;
+}
+
+/*----------TOP---------*/
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+/*----------TITLE----------*/
+
+.Cleaning-service-title {
+	text-align:center;
+}
+
+.Cleaning-service-title h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.Cleaning-service-title h3 {
+	font-size:15px;
+}
+
+/*----------TABLE_BOX----------*/
+
+.tablebox {
+	padding-top:20px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:20px;
+}
+
+.tablebox .container {
+	border-radius:5px;
+	background-color:rgba(255, 220, 220, 0.4);
+	padding:10px;
+	text-align:center;
+}
+
+
+/*----------TABLES----------*/
+
+#hor-minimalist-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: rgba(255,255,255,0.7);
+	margin: 0px;
+	width:100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+#hor-minimalist-b th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #CA1464;
+	padding: 10px 8px;
+	border-bottom: 3px solid rgba(255, 220, 220, 0.4);
+}
+#hor-minimalist-b td
+{
+	border-bottom: 1px solid rgba(255, 220, 220, 0.4);
+	color: #D95B8E;
+	padding: 6px 8px;
+}
+#hor-minimalist-b tbody tr:hover td
+{
+	color: #E1166F;
+}

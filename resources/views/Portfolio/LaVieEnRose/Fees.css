@@ -1,0 +1,104 @@
+.control {
+	padding-top:50px;
+}
+
+/*----------TOP---------*/
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+/*----------FEES----------*/
+
+.FEES {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:100px;
+	background-image:url(images/elder%20care.jpg);
+}
+
+/*----------TITLE----------*/
+
+.FEES-title {
+	padding-top:43px;
+	padding-bottom:20px;
+	text-align:center;
+}
+
+.FEES-title h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.FEES-title h3 {
+	text-align:center;
+	font-size:15px;
+	padding-bottom:300px;
+}
+
+/*----------TABLE_BOX----------*/
+
+.tablebox {
+	padding-top:10px;
+	padding-left:5px;
+	padding-right:5px;
+	padding-bottom:20px;
+}
+
+.tablebox .container {
+	border-radius:5px;
+	background-color:rgba(255, 220, 220, 0.4);
+	padding:10px;
+	text-align:center;
+}
+
+
+/*----------TABLES----------*/
+
+#hor-minimalist-b
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: rgba(255,255,255,0.7);
+	margin: 0px;
+	width:100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+#hor-minimalist-b th
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #CA1464;
+	padding: 10px 8px;
+	border-bottom: 3px solid rgba(255, 220, 220, 0.4);
+}
+#hor-minimalist-b td
+{
+	border-bottom: 1px solid rgba(255, 220, 220, 0.4);
+	color: #D95B8E;
+	padding: 6px 8px;
+}
+#outline {
+	border-bottom: 3px solid #FFDCDC;
+}
+#hor-minimalist-b tbody tr:hover td
+{
+	color: #E1166F;
+}

@@ -1,0 +1,228 @@
+#leftfloat {
+	float:left;
+	padding-left:20px;
+	bottom:10px;
+}
+
+#rightfloat {
+	padding-left:80px;
+	position:relative;
+	top:13px;
+}
+
+#rightfloat h3 {
+	font-family:LifeSavers;
+}
+
+#leftfloat img {
+	width:50px;
+	max-width:100%;
+}
+
+.overallfloat {
+	padding-bottom:30px;
+}
+
+#linkpage1 {
+	padding-top:10px;
+	text-align:center;
+	font-family:DancingScript;
+}
+
+#linkpage1 a{
+	font-size:25px;
+	color:#6GC5C9;
+}
+
+.Disabilities2 {
+	padding-top:40px;
+	padding-bottom:60px;
+	background-color:#F8F8F8;
+	
+}
+
+.Disabilities2 .container {
+	background-color:#F8F8F8;
+}
+
+#Disabilities-TITLE2 {
+	padding-top:10px;
+	padding-bottom:5px;
+	text-align:center;
+}
+
+#Disabilities-TITLE2 h2 {
+	background-color:#F8F8F8;
+	font-size:40px;
+	color:#000000;
+	font-family:DancingScript;
+}
+
+#Disabilities-SUB {
+	padding-bottom:25px;
+	background-color:#F8F8F8;
+	font-size:30px;
+	color:#000000;
+	font-family:DancingScript;
+}
+
+.Disabilities2 p {
+	font-size:24px;
+	text-align:center;
+}
+
+#bullettext {
+	font-size:14px;
+}
+
+#finalcaption {
+	font-size:17px;
+}
+
+#finalcaption #capital {
+	font-size:25px;
+}
+
+/*----------FEEDBACK----------*/
+
+
+.Feedback-Title {
+	padding-top:55px;
+	padding-bottom:20px;
+	text-align:center;
+	font-family:DancingScript;
+	font-size:40px;
+}
+
+.Feedback-Sub {
+	text-align:center;
+}
+
+.Feedback-Text {
+	padding:40px 20px;
+	background:rgba(255,255,255,0.7);
+	border-radius: 5px;
+	max-height:200px;
+}
+
+@media screen and (max-width: 350px) {
+	.Feedback-Text {
+		min-height:200px;
+	}
+}
+
+#Inner-Quote {
+	font-size:20px;
+	font-family:OmbraRegular;
+}
+
+#Quote {
+	font-size:15px;
+	font-family:OmbraRegular;
+}
+
+#Said-By {
+}
+
+
+/*----------CAROUSEL----------*/
+	
+	.Feedback-wrap {
+		padding-top:20px;
+		background-image:url(roses_blur.jpg);
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+		padding-bottom:30px;
+	}
+
+	.slider-control {
+		padding-right:30px;
+		padding-left:30px;
+	}
+
+	.slider{
+		max-width:1173px;
+		margin: auto;
+		text-align:center;
+		background-color:rgba(255,255,255,0.0);
+	}
+	.slider div{
+		padding-top:10px;
+	}
+	
+	
+	/*----------contactButton----------*/
+	
+	.contactButton {
+	position:relative;
+	bottom:40px;
+     
+    /*Step 2: Basic Button Styles*/
+	display: inline-block;
+    max-height: 100px;
+    max-width: 300px;
+     
+    /*Step 3: Text Styles*/
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font: bold 25px DancingScript;
+     
+    /*Step 4: Fancy CSS3 Styles*/
+    background: -webkit-linear-gradient(top, rgb(244,162,163),rgb(255,120,120));
+    background: -moz-linear-gradient(top, rgb(244,162,163),rgb(255,120,120));
+    background: -o-linear-gradient(top, rgb(244,162,163),rgb(255,120,120));
+    background: -ms-linear-gradient(top, rgb(244,162,163),rgb(255,120,120));
+    background: linear-gradient(top, rgb(244,162,163),rgb(255,120,120));
+     
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+     
+    -webkit-box-shadow: 0 4px 0 rgb(230,162,163);
+    -moz-box-shadow: 0 4px 0 rgb(230,162,163);
+    box-shadow: 0 4px 0 rgb(230,162,163);
+     
+    text-shadow: 0 2px 2px rgba(55, 55, 55, 0.2);
+	
+	padding-right:30px;
+	padding-left:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+     
+}
+ 
+/*Step 3: Link Styles*/
+a.contactButton {
+    text-decoration: none;
+}
+ 
+/*Step 5: Hover Styles*/
+a.contactButton:hover {
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	/*WHITER*/
+	background: -webkit-linear-gradient(top, rgb(244,162,163),rgb(244,150,150));
+    background: -moz-linear-gradient(top, rgb(244,162,163),rgb(244,150,150));
+    background: -o-linear-gradient(top, rgb(244,162,163),rgb(244,150,150));
+    background: -ms-linear-gradient(top, rgb(244,162,163),rgb(244,150,150));
+    background: linear-gradient(top, rgb(244,162,163),rgb(244,150,150));
+}
+
+a.contactButton:active {
+	color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+	box-shadow: 0 2px 0 rgb(230,162,163);
+}
+
+a.contactButton:visited {
+	color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}	
+	
+.contactButton-Wrapper {
+	padding-top:50px;
+	text-align:center;
+}
+

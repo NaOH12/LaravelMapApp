@@ -1,0 +1,55 @@
+.greybackground {
+	padding-top:33px;
+}
+
+.control {
+	padding-top:50px;
+}
+
+/*----------TOP---------*/
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+/*----------RECRUITMENT----------*/
+
+.Recruitment {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:100px;
+}
+
+/*----------TITLE----------*/
+
+.Recruitment-title {
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+.Recruitment-title h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.Recruitment-title h3 {
+	font-size:20px;
+	font-family:DancingScript;
+}

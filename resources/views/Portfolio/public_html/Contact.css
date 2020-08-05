@@ -1,0 +1,140 @@
+.greybackground {
+	padding-top:33px;
+}
+
+.control {
+	padding-top:50px;
+}
+
+/*----------TOP---------*/
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+/*----------FEES----------*/
+
+.Contacts {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:30px;
+}
+
+/*----------TITLE----------*/
+
+.emaillink-container {
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+#emaillink {
+	font-size:16px;
+}
+
+#colour {
+	color: rgba(6,100,152,0.92);
+}
+
+.Contacts-title {
+	padding-top:10px;
+	padding-bottom:40px;
+	text-align:center;
+}
+
+.Contacts-title h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.Contacts-title h3 {
+	font-size:20px;
+	font-family:DancingScript;
+}
+
+#Maps-Control {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:20px;
+}
+
+#googleMap {
+    -webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+	
+	width:500px;
+	height:300px;
+	max-width:100%;
+}
+
+#centered {
+	position:relative;
+	overflow:hidden;
+} 
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: 10px;
+	color: #999999;
+}
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 40px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}

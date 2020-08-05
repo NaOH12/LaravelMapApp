@@ -1,0 +1,90 @@
+.greybackground {
+	padding-top:33px;
+}
+
+.control {
+	padding-top:50px;
+}
+
+/*----------TOP---------*/
+
+.navbox {
+	background-color: #F9F9F9;
+}
+
+.logobanner .container {
+	text-align:center;
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner {
+	background-color:#A28E8E;
+	height:200px;
+}
+
+.logobanner img {
+	padding-top:50px;
+	width:400px;
+	max-width:100%;
+}
+/*----------FEES----------*/
+
+.Contacts {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:90px;
+}
+
+/*----------TITLE----------*/
+
+.emaillink-container {
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+#emaillink {
+	font-size:16px;
+}
+
+#colour {
+	color: rgba(6,100,152,0.92);
+}
+
+.Contacts-title {
+	padding-top:10px;
+	padding-bottom:40px;
+	text-align:center;
+}
+
+.Contacts-title h2 {
+	font-size:40px;
+	font-family:DancingScript;
+}
+
+.Contacts-title h3 {
+	font-size:20px;
+	font-family:DancingScript;
+}
+
+#maps {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:20px;
+	border-radius: 15px;
+	
+	-webkit-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    -moz-border-radius: 15px;
+	width:500px;
+	height:300px;
+	max-width:100%;
+}
+
+#centered {
+	position:relative;
+	overflow:hidden;
+} 
