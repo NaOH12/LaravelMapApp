@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('unfinished');
+    return view('portfolio.portfolio');
+    // return File::get(public_path() . '/portfolio/portfolio.blade.php');
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
