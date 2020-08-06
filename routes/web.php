@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Portfolio/index.html');
+    return view('unfinished');
 });
 
 // Route::get('/home', 'HomeController@index')->name('home');
