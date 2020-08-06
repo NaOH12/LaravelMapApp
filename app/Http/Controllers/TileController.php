@@ -46,9 +46,15 @@ class TileController extends Controller
      */
     public function show($tile_id)
     {
-        $tile = Tile::findOrFail($tile_id);
-        return response(['success' => true, 'message' => 'Retrieved successfully', 
-            'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
+        // $tile = Tile::findOrFail($tile_id);
+        $tile = Tile::find($tile_id);
+        if ($tile != null) {
+            return response(['success' => true, 'message' => 'Retrieved successfully', 
+                'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
+        } else {
+            return response(['success' => false, 'message' => 'No tile exists.', 
+                'data' => []], 200);
+        }
     }
 
     // /**
