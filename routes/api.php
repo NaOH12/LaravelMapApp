@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/tiles/{tile_id}/posts', 'TileController@show')->name('tiles.posts.show')->middleware('auth:api');
-Route::get('/tiles/{tile_id}/art_posts', 'ArtTileController@show')->name('tiles.art_posts.show')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/posts', 'TileController@show')->name('tiles.posts.show')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/art_posts', 'ArtTileController@show')->name('tiles.art_posts.show')->middleware('auth:api');
 
 Route::post('/posts', 'PostController@store')->name('posts.store')->middleware('auth:api');
 Route::post('/art_posts/text_posts', 'ArtPostController@textStore')->name('art_posts.text_posts.store')->middleware('auth:api');

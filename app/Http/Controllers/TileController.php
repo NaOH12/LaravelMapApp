@@ -44,17 +44,31 @@ class TileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($tile_id)
+    public function show($tile_ids)
     {
-        // $tile = Tile::findOrFail($tile_id);
-        $tile = Tile::find($tile_id);
-        if ($tile != null) {
-            return response(['success' => true, 'message' => 'Retrieved successfully', 
-                'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
+        $tile_ids_array = array_map('intval', explode(",", $tile_ids));
+        // dd($tile_ids_array);
+        $tiles = Tile::findMany($tile_ids_array);
+        if (!$tiles->isEmpty()) {
+            return response(['success' => true, 
+                'data' => $tiles->map(function ($tile) {
+                    return [
+                        'tile_id' => $tile->id,
+                        'posts' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                    ];
+                })], 200);
         } else {
-            return response(['success' => false, 'message' => 'No tile exists.', 
+            return response(['success' => false, 
                 'data' => []], 200);
         }
+        // $tile = Tile::find($tile_id);
+        // if ($tile != null) {
+        //     return response(['success' => true, 'message' => 'Retrieved successfully', 
+        //         'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
+        // } else {
+        //     return response(['success' => false, 'message' => 'No tile exists.', 
+        //         'data' => []], 200);
+        // }
     }
 
     // /**
