@@ -4,14 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ArtTile;
+use App\ArtPost;
 
 class ArtTileController extends Controller
 {
     
-    public function show($tile_ids)
+    public function pull($request)
     {
-        $tile_ids_array = array_map('intval', explode(",", $tile_ids));
-        // dd($tile_ids_array);
+        $tile_ids_array = array_map('intval', explode(",", $request));
+
+        if (count($tile_ids_array) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+        
         $tiles = ArtTile::findMany($tile_ids_array);
         if (!$tiles->isEmpty()) {
             return response(['success' => true, 
@@ -25,14 +31,31 @@ class ArtTileController extends Controller
             return response(['success' => false, 
                 'data' => []], 200);
         }
-        // $tile = ArtTile::find($tile_id);
-        // if ($tile != null) {
-        //     return response(['success' => true, 'message' => 'Retrieved successfully', 
-        //         'data' => $tile->artPosts->map->only(['id', 'longitude', 'latitude', 'rotation','postable'])], 200);
-        // } else {
-        //     return response(['success' => false, 'message' => 'No tile exists.', 
-        //         'data' => []], 200);
-        // }
+    }
+
+    public function fetch($request)
+    {
+
+        $latest_post_ids = array_map('intval', explode(",", $request));
+        if (count($latest_post_ids) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+        // dd($tile_ids_array);
+        $posts = ArtPost::findMany($latest_post_ids);
+        if (!$posts->isEmpty()) {
+            return response(['success' => true, 
+                'data' => $posts->map(function ($post) {
+                    return [
+                        'tile_id' => $post->artTile->id,
+                        'posts' => $post->artTile->artPosts->where('id', '>', $post->id)->map->only(['id', 'longitude', 'latitude', 'rotation','postable']),
+                    ];
+                })], 200);
+        } else {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
     }
 
 }

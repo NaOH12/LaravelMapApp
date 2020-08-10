@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tile;
+use App\Post;
 use Illuminate\Http\Request;
 
 class TileController extends Controller
@@ -44,10 +45,15 @@ class TileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($tile_ids)
+    public function pull($request)
     {
-        $tile_ids_array = array_map('intval', explode(",", $tile_ids));
-        // dd($tile_ids_array);
+        $tile_ids_array = array_map('intval', explode(",", $request));
+
+        if (count($tile_ids_array) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
         $tiles = Tile::findMany($tile_ids_array);
         if (!$tiles->isEmpty()) {
             return response(['success' => true, 
@@ -61,47 +67,30 @@ class TileController extends Controller
             return response(['success' => false, 
                 'data' => []], 200);
         }
-        // $tile = Tile::find($tile_id);
-        // if ($tile != null) {
-        //     return response(['success' => true, 'message' => 'Retrieved successfully', 
-        //         'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
-        // } else {
-        //     return response(['success' => false, 'message' => 'No tile exists.', 
-        //         'data' => []], 200);
-        // }
     }
 
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function edit($id)
-    // {
-    //     //
-    // }
+    public function fetch($request)
+    {
 
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    // }
+        $latest_post_ids = array_map('intval', explode(",", $request));
+        if (count($latest_post_ids) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
 
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
+        $posts = Post::findMany($latest_post_ids);
+        if (!$posts->isEmpty()) {
+            return response(['success' => true, 
+                'data' => $posts->map(function ($post) {
+                    return [
+                        'tile_id' => $post->tile->id,
+                        'posts' => $post->tile->posts->where('id', '>', $post->id)->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                    ];
+                })], 200);
+        } else {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+    }
+
 }
