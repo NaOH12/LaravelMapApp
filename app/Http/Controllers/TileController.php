@@ -91,6 +91,48 @@ class TileController extends Controller
             return response(['success' => false, 
                 'data' => []], 200);
         }
+
+    }
+    
+    public function fetchAndPull($request) {
+
+        $fetchPullRequest = explode(":", $request);
+
+        if (count($fetchPullRequest) != 2) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+
+        $latest_post_ids = array_map('intval', explode(",", $fetchPullRequest[0]));
+        $tile_ids = array_map('intval', explode(",", $fetchPullRequest[1]));
+        
+        if (count($latest_post_ids) > 10 || count($tile_ids) > 10) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+        $fetch_posts = Post::findMany($latest_post_ids)->map(function ($post) {
+                return [
+                    'tile_id' => $post->tile->id,
+                    'posts' => $post->tile->posts->where('id', '>', $post->id)->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                ];
+            }
+        );
+
+        $pull_posts = Tile::findMany($tile_ids)->map(function ($tile) {
+            return [
+                'tile_id' => $tile->id,
+                'posts' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude']),
+            ];
+        });
+
+        return response(['success' => true, 
+            'data' => [
+                'fetch' => $fetch_posts,
+                'pull' => $pull_posts,
+            ]], 200);   
+        
     }
 
 }
