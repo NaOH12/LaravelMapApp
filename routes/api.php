@@ -18,8 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/tiles/{tile_id}/posts', 'TileController@show')->name('tiles.posts.show')->middleware('auth:api');
-Route::get('/tiles/{tile_id}/art_posts', 'ArtTileController@show')->name('tiles.art_posts.show')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/posts/pull', 'TileController@pull')->name('tiles.posts.pull')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/posts/fetch', 'TileController@fetch')->name('tiles.posts.fetch')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/posts/fetch_pull', 'TileController@fetchAndPull')->name('tiles.posts.fetch_pull')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/art_posts/pull', 'ArtTileController@pull')->name('tiles.art_posts.pull')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/art_posts/fetch', 'ArtTileController@fetch')->name('tiles.art_posts.fetch')->middleware('auth:api');
+Route::get('/tiles/{tile_ids}/art_posts/fetch_pull', 'ArtTileController@fetchAndPull')->name('tiles.art_posts.fetch_pull')->middleware('auth:api');
 
 Route::post('/posts', 'PostController@store')->name('posts.store')->middleware('auth:api');
 Route::post('/art_posts/text_posts', 'ArtPostController@textStore')->name('art_posts.text_posts.store')->middleware('auth:api');

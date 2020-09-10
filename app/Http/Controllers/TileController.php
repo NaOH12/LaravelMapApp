@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tile;
+use App\Post;
 use Illuminate\Http\Request;
 
 class TileController extends Controller
@@ -44,44 +45,94 @@ class TileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($tile_id)
+    public function pull($request)
     {
-        $tile = Tile::findOrFail($tile_id);
-        return response(['success' => true, 'message' => 'Retrieved successfully', 
-            'data' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude'])], 200);
+        $tile_ids_array = array_map('intval', explode(",", $request));
+
+        if (count($tile_ids_array) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+        $tiles = Tile::findMany($tile_ids_array);
+        if (!$tiles->isEmpty()) {
+            return response(['success' => true, 
+                'data' => $tiles->map(function ($tile) {
+                    return [
+                        'tile_id' => $tile->id,
+                        'posts' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                    ];
+                })], 200);
+        } else {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
     }
 
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function edit($id)
-    // {
-    //     //
-    // }
+    public function fetch($request)
+    {
 
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    // }
+        $latest_post_ids = array_map('intval', explode(",", $request));
+        if (count($latest_post_ids) > 15) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
 
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
+        $posts = Post::findMany($latest_post_ids);
+        if (!$posts->isEmpty()) {
+            return response(['success' => true, 
+                'data' => $posts->map(function ($post) {
+                    return [
+                        'tile_id' => $post->tile->id,
+                        'posts' => $post->tile->posts->where('id', '>', $post->id)->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                    ];
+                })], 200);
+        } else {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+    }
+    
+    public function fetchAndPull($request) {
+
+        $fetchPullRequest = explode(":", $request);
+
+        if (count($fetchPullRequest) != 2) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+
+        $latest_post_ids = array_map('intval', explode(",", $fetchPullRequest[0]));
+        $tile_ids = array_map('intval', explode(",", $fetchPullRequest[1]));
+        
+        if (count($latest_post_ids) > 10 || count($tile_ids) > 10) {
+            return response(['success' => false, 
+                'data' => []], 200);
+        }
+
+        $fetch_posts = Post::findMany($latest_post_ids)->map(function ($post) {
+                return [
+                    'tile_id' => $post->tile->id,
+                    'posts' => $post->tile->posts->where('id', '>', $post->id)->map->only(['id', 'post_content', 'longitude', 'latitude']),
+                ];
+            }
+        );
+
+        $pull_posts = Tile::findMany($tile_ids)->map(function ($tile) {
+            return [
+                'tile_id' => $tile->id,
+                'posts' => $tile->posts->map->only(['id', 'post_content', 'longitude', 'latitude']),
+            ];
+        });
+
+        return response(['success' => true, 
+            'data' => [
+                'fetch' => $fetch_posts,
+                'pull' => $pull_posts,
+            ]], 200);   
+        
+    }
+
 }
