@@ -137,7 +137,7 @@ body {
 }
 
 .endGameAIContainer {
-	background-color:  #013545;
+	background-color:  #0E3944;
 }
 
 video {
@@ -163,6 +163,37 @@ video {
 	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
+.mapProject_heading {
+	background: rgb(0,0,0,0);background: linear-gradient(90deg, rgba(87, 192, 241, 0.967) 0%, rgba(87, 192, 241, 0.967) 81.5%, rgba(0,0,0,0.0) 81.5%);
+}
+
+.mapTitleSection {
+	text-align:center;
+	background-color:#295F84;
+	max-width:100%;
+}
+
+#mapVideoContainer {
+	/* width:100%;
+	max-width:200px;
+	height:auto; */
+	text-align: right;
+}
+
+#mapVideo video {
+	padding-top:0%;
+	padding-bottom:1%;
+	padding-left:0%;
+	padding-right:0%;
+	width:100%;
+	max-width:200px;
+	height:auto;
+	/* width: 350px;
+    border-radius: 10px; 
+    overflow: hidden;  */
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
 #disBgImage {
 	background-image: url('DisImages/cover.png');
 	/* background-size: 100%; */
@@ -174,7 +205,7 @@ video {
 	background-size: 35% 35%;
     /* width: auto; */
     /* padding-top: 54.166666666667%; */
-	height: 50vh;
+	height: 500px;
 
 	/* object-fit: cover;
 	object-position: top; */
@@ -413,6 +444,17 @@ video {
 	opacity: 0.7;
 	padding-top:1%;
 	padding-bottom:1%;
+	text-align: center;
+}
+
+.iconImage {
+	font-size: 0;
+	vertical-align: baseline;
+}
+
+.verticalLine {
+	border-left: medium solid grey;
+	margin-right: 20px;
 }
 
 .CSGCWContainer {
